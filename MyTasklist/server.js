@@ -9,10 +9,10 @@ var tasks = require('./routes/tasks');
 var port = 3000;
 var app = express();
 
-//view Engine
+//views Engine
 
-app.set('view',path.join(__dirname,'views'));
-app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'));
+app.set('views engine','ejs');
 app.engine('html',require('ejs').renderFile);
 //set static folder
 app.use(express.static(path.join(__dirname,'client')));
